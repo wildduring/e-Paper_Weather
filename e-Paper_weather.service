@@ -1,0 +1,11 @@
+[Unit]
+Description=e-Paper Weather Service
+After=network.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python3 /usr/bin/e-Paper_weather/weather.py
+ExecStop=/usr/bin/python3 /usr/bin/e-Paper_weather/clear.py
+
+[Install]
+WantedBy=multi-user.target
