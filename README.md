@@ -17,4 +17,4 @@ Using the persistent [systemd](https://wiki.archlinux.org/title/systemd#Basic_sy
 ### Disable start on boot:
 'sudo systemctl disable e-Paper_weather.service'
 ### Check status:
-'sudo systemctl status e-Paper_weather.service'
+    sudo systemctl status e-Paper_weather.service
