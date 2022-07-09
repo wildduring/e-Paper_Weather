@@ -1,5 +1,12 @@
 # e-Paper_Weather
 Use raspberrypi zero to show weather info on e-Paper(2.13inch e-Paper HAT (B)).
+![e-Paper_Weather](https://github.com/wildduring/e-Paper_Weather/blob/master/image/e-Paper_Weather.jpg)
+## Hardware
+### [UPS-Lite](https://github.com/linshuqin329/UPS-Lite)
+![UPS-Lite_V1.2](https://github.com/wildduring/e-Paper_Weather/blob/master/image/UPS-Lite_V1.2.jpg)
+### [2.13inch e-Paper HAT (B)](https://www.waveshare.net/wiki/2.13inch_e-Paper_HAT_(B))
+![2.13inch-e-Paper-HAT-B-1](https://github.com/wildduring/e-Paper_Weather/blob/master/image/2.13inch-e-Paper-HAT-B-1.jpg)
+![2.13inch-e-Paper-HAT-B-7](https://github.com/wildduring/e-Paper_Weather/blob/master/image/2.13inch-e-Paper-HAT-B-7.jpg)
 ## Dependencies
 ### BCM2835
 ```
