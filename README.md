@@ -10,15 +10,15 @@ sudo ./configure && sudo make && sudo make check && sudo make install
 ```
 ### wiringPi
 ```
-#打开树莓派终端，并运行以下指令
+#Open the raspberry pi terminal and run the following command
 sudo apt-get install wiringpi
-#对于树莓派2019年5月之后的系统（早于之前的可不用执行），可能需要进行升级：
+#For the system of raspberry pi after May 2019 (those earlier than that may not be implemented), it may need to be upgraded:
 wget https://project-downloads.drogon.net/wiringpi-latest.deb
 sudo dpkg -i wiringpi-latest.deb
 gpio -v
-# 运行gpio -v会出现2.52版本，如果没有出现说明安装出错
+# Running `GPIO -v` will result in version 2.52. If there is no description, the installation error will appear
 
-#Bullseye分支系统使用如下命令：
+#The Bullseye branch system uses the following commands：
 git clone https://github.com/WiringPi/WiringPi
 cd WiringPi
 ./build
