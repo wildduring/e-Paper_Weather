@@ -48,6 +48,10 @@ git clone https://github.com/wildduring/e-Paper_Weather.git
 cd e-Paper_Weather
 sudo make install
 ```
+## How to run this demo?
+First, we need a [amap](https://lbs.amap.com/) key, you can register an account by yourself.
+Second, put the key you obtained in the file './program/config/usr_key.ini'.
+Last, update the city code, you can get help from the (amap lib)[https://lbs.amap.com/api/webservice/download].
 ## Systemd service
 Using the persistent [systemd](https://wiki.archlinux.org/title/systemd#Basic_systemctl_usage) service
 ### Start service immediately:
