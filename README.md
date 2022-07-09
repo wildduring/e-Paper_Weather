@@ -23,7 +23,7 @@ git clone https://github.com/WiringPi/WiringPi
 cd WiringPi
 ./build
 gpio -v
-# 运行gpio -v会出现2.60版本，如果没有出现说明安装出错
+# Running `GPIO -v` will result in version 2.52. If there is no description, the installation error will appear
 ```
 ### For python3 we also need:
 ```
@@ -33,6 +33,7 @@ sudo apt-get install python3-pil
 sudo apt-get install python3-numpy
 sudo pip3 install RPi.GPIO
 sudo pip3 install spidev
+sudo pip3 install struct smbus
 ```
 ## Installation
 ```
