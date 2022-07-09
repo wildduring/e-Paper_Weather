@@ -7,7 +7,7 @@ medir = os.path.dirname(os.path.realpath(__file__))  #当前文件夹
 bmpdir = os.path.join(medir, 'bmps')  #天气图标库
 cfgdir = os.path.join(medir, 'config')  #配置文件库
 libdir = os.path.join(medir, 'lib')   #水墨屏显示库
-logdir = os.path.join(medir, 'weather_log')   #水墨屏显示库
+logdir = os.path.join(medir, 'weather_log')   #日志文件
 
 if os.path.exists(libdir):
     sys.path.append(libdir)
@@ -158,6 +158,20 @@ def point_coordinate(min_temp, max_temp, temp):
     b = 36-a*max_temp
     return int(a*temp+b)    #分辨率低，此处取整误差较大
 
+def save_debug_img():   #保存调试用的图片
+    img1 = HBimage.convert('RGB')
+    img2 = HRimage.convert('RGB')
+    pixels = img2.load()
+    for i in range(0, img2.size[0]):
+        for j in range(0, img2.size[1]):
+            r, g, b = pixels[i, j]
+            if (r ==0 and g == 0 and b == 0):
+                pixels[i, j] = (255, 0, 0)
+    img1.save(os.path.join(logdir, "black_debug.bmp"))
+    img2.save(os.path.join(logdir, "red_debug.bmp"))
+    img = Image.blend(img1, img2, 0.6)
+    img.save(os.path.join(logdir, "debug_img.bmp"))
+
 def show_weather(weather_info_base, weather_info_all):
     global network
     try:
@@ -290,6 +304,8 @@ def main():
     try:
         while(True):
             show_weather(get_weather_info('base'), get_weather_info('all'))
+            if(len(sys.argv)>1 and sys.argv[1].lower == "debug"):
+                save_debug_img()
             waiting()
     except KeyboardInterrupt:
         logging.info("ctrl + c:")
