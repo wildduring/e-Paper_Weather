@@ -304,7 +304,7 @@ def main():
     try:
         while(True):
             show_weather(get_weather_info('base'), get_weather_info('all'))
-            if(len(sys.argv)>1 and sys.argv[1].lower == "debug"):
+            if(len(sys.argv)>1 and sys.argv[1].lower() == "debug"):
                 save_debug_img()
                 logging.info("Exiting...")
                 epd.init()
